@@ -1,0 +1,17 @@
+#!/usr/bin/python 
+
+import urllib
+import datetime
+
+filehandle = urllib.urlopen('http://checkip.dyndns.org')
+data = filehandle.read()
+filehandle.close()
+ip = ''
+
+for c in data:
+  count = 0
+  if c == '.' or str.isdigit(c):
+     ip = ip + c
+
+if ip:
+     print 'Your IP Address is ', ip, ' as of ', datetime.datetime.now()
