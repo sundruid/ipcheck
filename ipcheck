@@ -1,5 +1,7 @@
 #!/usr/bin/python 
 
+# written by sundruid 
+
 import urllib
 import datetime
 
